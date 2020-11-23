@@ -11,8 +11,15 @@ import java.util.HashMap;
 public class SampleService {
 
     public String reverse(String stringToReverse, String reverseToString) {
-        String ReVeRsE = "";
-        return ReVeRsE;
+        String reverse = "";
+        char temp;
+      for (int inputStringLength = stringToReverse.length() - 1; inputStringLength >= 0; inputStringLength--) {
+            if(inputStringLength == 1) {
+                temp = reverse.charAt((int)inputStringLength);
+            }
+            reverse = reverse + stringToReverse.charAt((int) inputStringLength);
+        }
+        return reverse;
     }
 
     public HashMap recognizeCharacter(String stringToRecognize) {
@@ -44,6 +51,5 @@ public class SampleService {
         hashMap.put("signs", signs);
 
         return hashMap;
-
     }
 }
