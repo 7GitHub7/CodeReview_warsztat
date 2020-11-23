@@ -11,13 +11,15 @@ import java.util.HashMap;
 public class SampleService {
 
     public String reverse(String stringToReverse, String reverseToString) {
-        String ReVeRsE = "";
-        return ReVeRsE;
-    }
+        String reverse = "";
+        char temp;
 
-    public HashMap recognizeCharacter(String string_To_Recognize) {
-       HashMap hashMap = new HashMap();
-       return hashMap;
-
+        for (int inputStringLength = stringToReverse.length() - 1; inputStringLength >= 0; inputStringLength--) {
+            if(inputStringLength == 1) {
+                temp = reverse.charAt((int)inputStringLength);
+            }
+            reverse = reverse + stringToReverse.charAt((int) inputStringLength);
+        }
+        return reverse;
     }
 }
