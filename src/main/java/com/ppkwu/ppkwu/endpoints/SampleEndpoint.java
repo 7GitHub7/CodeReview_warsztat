@@ -17,7 +17,7 @@ public class SampleEndpoint {
 
     @GetMapping("reverse/{characters}")
     public String getReversedString(@PathVariable String characters) {
-        return sampleService.reverse(characters,"");
+        return sampleService.reverse(characters);
     }
 
     @GetMapping("recognize/{characters}")

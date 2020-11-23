@@ -10,9 +10,9 @@ import java.util.HashMap;
 @NoArgsConstructor
 public class SampleService {
 
-    public String reverse(String stringToReverse, String reverseToString) {
-        String ReVeRsE = "";
-        return ReVeRsE;
+    public String reverse(String stringToReverse) {
+        StringBuilder toReverse = new StringBuilder(stringToReverse);
+        return toReverse.reverse().toString();
     }
 
     public HashMap recognizeCharacter(String stringToRecognize) {

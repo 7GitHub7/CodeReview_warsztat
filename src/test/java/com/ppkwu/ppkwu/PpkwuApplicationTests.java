@@ -28,7 +28,7 @@ public class PpkwuApplicationTests {
 	public void test01reverse() {
 		String input = "12345";
 		String expected = "54321";
-		String result = sampleService.reverse(input,"");
+		String result = sampleService.reverse(input);
 		assertEquals(expected,result);
 	}
 
