@@ -15,9 +15,31 @@ public class SampleService {
         return ReVeRsE;
     }
 
-    public HashMap recognizeCharacter(String string_To_Recognize) {
-       HashMap hashMap = new HashMap();
-       return hashMap;
+    public HashMap recognizeCharacter(String stringToRecognize) {
+        ArrayList digits = new ArrayList();
+        ArrayList lettersLowerCase = new ArrayList();
+        ArrayList lettersUpperCase = new ArrayList();
+        ArrayList signs = new ArrayList();
 
+        HashMap hashMap = new HashMap();
+
+        for (int i = 0; i < stringToRecognize.length(); i++) {
+            if (Character.isDigit(stringToRecognize.charAt(i))) {
+                digits.add(stringToRecognize.charAt(i));
+            } else if (Character.isLowerCase(stringToRecognize.charAt(i))) {
+                lettersLowerCase.add(stringToRecognize.charAt(i));
+            }  else if (Character.isUpperCase(stringToRecognize.charAt(i))) {
+                lettersUpperCase.add(stringToRecognize.charAt(i));
+            } else {
+                signs.add(stringToRecognize.charAt(i));
+            }
+        }
+
+        hashMap.put("digits", digits);
+        hashMap.put("lowercaseletters", lettersLowerCase);
+        hashMap.put("uppercaseletters", lettersUpperCase);
+        hashMap.put("signs", signs);
+
+        return hashMap;
     }
 }
