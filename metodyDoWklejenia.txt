@@ -19,6 +19,7 @@ public String reverse(String stringToReverse, String reverseToString) {
 osoba 2
 ///////////////////////
 
+
 public HashMap recognizeCharacter(String string_To_Recognize) {
 ArrayList Digits = new ArrayList();
 	ArrayList Letters1 = new ArrayList();
