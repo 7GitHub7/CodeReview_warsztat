@@ -15,32 +15,30 @@ public class SampleService {
         return ReVeRsE;
     }
 
-    public HashMap recognizeCharacter(String string_To_Recognize) {
-        ArrayList Digits = new ArrayList();
-        ArrayList Letters1 = new ArrayList();
-        ArrayList Letters2 = new ArrayList();
-        ArrayList SIGNS = new ArrayList();
+    public HashMap recognizeCharacter(String stringToRecognize) {
+        ArrayList digits = new ArrayList();
+        ArrayList lettersLowerCase = new ArrayList();
+        ArrayList lettersUpperCase = new ArrayList();
+        ArrayList signs = new ArrayList();
 
         HashMap hashMap = new HashMap();
 
-        for (int i = 0; i < string_To_Recognize.length(); i++) {
-            if (Character.isDigit(string_To_Recognize.charAt(i))) {
-                Digits.add(string_To_Recognize.charAt(i));
-            } else if (Character.isLowerCase(string_To_Recognize.charAt(i))) {
-                Letters1.add(string_To_Recognize.charAt(i));
-            } else if (i == string_To_Recognize.length()) {
-                break;
-            } else if (Character.isUpperCase(string_To_Recognize.charAt(i))) {
-                Letters2.add(string_To_Recognize.charAt(i));
+        for (int i = 0; i < stringToRecognize.length(); i++) {
+            if (Character.isDigit(stringToRecognize.charAt(i))) {
+                digits.add(stringToRecognize.charAt(i));
+            } else if (Character.isLowerCase(stringToRecognize.charAt(i))) {
+                lettersLowerCase.add(stringToRecognize.charAt(i));
+            }  else if (Character.isUpperCase(stringToRecognize.charAt(i))) {
+                lettersUpperCase.add(stringToRecognize.charAt(i));
             } else {
-                SIGNS.add(string_To_Recognize.charAt(i));
+                signs.add(stringToRecognize.charAt(i));
             }
         }
 
-        hashMap.put("digits", Digits);
-        hashMap.put("lowercaseletters", Letters1);
-        hashMap.put("uppercaseletters", Letters2);
-        hashMap.put("signs", SIGNS);
+        hashMap.put("digits", digits);
+        hashMap.put("lowercaseletters", lettersLowerCase);
+        hashMap.put("uppercaseletters", lettersUpperCase);
+        hashMap.put("signs", signs);
 
         return hashMap;
     }
