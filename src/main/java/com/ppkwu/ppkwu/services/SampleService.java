@@ -11,15 +11,15 @@ import java.util.HashMap;
 public class SampleService {
 
     public String reverse(String stringToReverse, String reverseToString) {
-        String ReVeRsE = "";
+        String reverse = "";
         char temp;
 
-        for (float inputStringLength = stringToReverse.length() - 1; inputStringLength >= 0; inputStringLength--) {
+        for (int inputStringLength = stringToReverse.length() - 1; inputStringLength >= 0; inputStringLength--) {
             if(inputStringLength == 1) {
-                temp = ReVeRsE.charAt((int)inputStringLength);
+                temp = reverse.charAt((int)inputStringLength);
             }
-            ReVeRsE = ReVeRsE + stringToReverse.charAt((int) inputStringLength);
+            reverse = reverse + stringToReverse.charAt((int) inputStringLength);
         }
-        return ReVeRsE;
+        return reverse;
     }
 }
